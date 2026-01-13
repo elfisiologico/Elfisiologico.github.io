@@ -1,21 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>El Fisiológico · Artículos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>El Fisiológico · Artículos Científicos</title>
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      line-height: 1.6;
+      background: #ffffff;
+      color: #111;
+    }
+
+    header {
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p.subtitle {
+      color: #555;
+      max-width: 700px;
+    }
+
+    section {
+      margin-top: 3rem;
+    }
+
+    .category {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .category h2 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
+    }
+
+    .category p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    .category a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #0057ff;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #eee;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>El Fisiológico</h1>
-<p>Repositorio de artículos científicos en HTML.</p>
+<header>
+  <h1>El Fisiológico</h1>
+  <p class="subtitle">
+    Repositorio de artículos científicos analizados y presentados en HTML interactivo,
+    con enfoque crítico, clínico y docente en fisioterapia y ciencias del movimiento.
+  </p>
+</header>
 
-<ul>
-  <li>
-    <a href="articulos/bfr-vs-hl.html">
-      BFR vs High Load Training
-    </a>
-  </li>
-</ul>
+<section>
+  <h2>Áreas de conocimiento</h2>
 
-</body>
-</html>
+  <div class="category">
+    <h2>Blood Flow Restriction (BFR)</h2>
+    <p>
+      Evidencia científica sobre entrenamiento con restricción del flujo sanguíneo,
+      comparativas con cargas altas, adaptaciones neuromusculares y aplicaciones clínicas.
+    </p>
+    <a href="articulos/bfr/index.html">Ver artículos de BFR →</a>
+  </div>
+
+  <div class="category">
+    <h2>Fascia y ecografía</h2>
+    <p>
+      Estudios sobre estructura fascial, imagen ecográfica, biomecánica y su implicación
+      en dolor, movimiento y toma de decisiones clínicas.
+    </p>
+    <a href="articulos/fascia/index.html">Ver artículos de fascia →</a>
+  </div>
+
+  <div class="category">
+    <h2>Neuromodulación y dolor</h2>
+    <p>
+      Investigación sobre tDCS, TENS, neuromodulación central y peri
