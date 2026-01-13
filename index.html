@@ -8,179 +8,96 @@
   <meta name="description" content="Repositorio científico de artículos analizados críticamente en fisioterapia, dolor, neurociencia, fascia, ecografía, BFR, tDCS, ATM y fisioterapia invasiva." />
   <meta name="author" content="El FisioLógico" />
 
-  <!-- Google Font -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --black:#000000;
-      --white:#ffffff;
-      --yellow:#FCBF06;
-      --muted:#b5b5b5;
-      --card:#111111;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--black);
-      color: var(--white);
-      line-height: 1.6;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: auto;
-      padding: 3rem 1.5rem 4rem;
-    }
-
-    header {
-      margin-bottom: 3rem;
-    }
-
-    .brand {
-      color: var(--yellow);
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-size: 2.4rem;
-      font-weight: 700;
-      margin: 0 0 1rem;
-    }
-
-    p.lead {
-      max-width: 720px;
-      color: var(--muted);
-      font-size: 1.1rem;
-    }
-
-    section.categories {
-      margin-top: 4rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid #1c1c1c;
-      padding: 1.5rem;
-      text-decoration: none;
-      color: var(--white);
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: var(--yellow);
-    }
-
-    .card h2 {
-      font-size: 1.1rem;
-      margin: 0 0 0.5rem;
-    }
-
-    .card span {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    footer {
-      margin-top: 6rem;
-      padding-top: 2rem;
-      border-top: 1px solid #1c1c1c;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    footer strong {
-      color: var(--white);
-    }
-  </style>
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="assets/css/base.css">
 </head>
 
 <body>
-  <main>
 
-    <header>
-      <div class="brand">Repositorio Científico</div>
-      <h1>El FisioLógico</h1>
-      <p class="lead">
-        Colección de artículos científicos analizados críticamente desde la fisioterapia clínica, la neurociencia del dolor y el razonamiento integrativo.
-      </p>
-    </header>
+<main>
 
-    <section class="categories">
-      <h2>Categorías</h2>
+  <header>
+    <div class="mono muted" style="letter-spacing:.12em; text-transform:uppercase; font-size:.8rem;">
+      Repositorio Científico
+    </div>
 
-      <div class="grid">
-        <a class="card" href="categorias/anatomia.html">
-          <h2>Anatomía</h2>
-          <span>Estructura, función y correlación clínica</span>
-        </a>
+    <h1>El FisioLógico</h1>
 
-        <a class="card" href="categorias/dolor.html">
-          <h2>Dolor</h2>
-          <span>Dolor crónico, sensibilización y abordaje clínico</span>
-        </a>
+    <p class="muted" style="max-width:720px; font-size:1.1rem;">
+      Colección de artículos científicos analizados críticamente desde la fisioterapia clínica,
+      la neurociencia del dolor y el razonamiento integrativo.
+    </p>
+  </header>
 
-        <a class="card" href="categorias/neurociencia.html">
-          <h2>Neurociencia</h2>
-          <span>Procesamiento central y control neuromodulador</span>
-        </a>
+  <section style="margin-top:4rem;">
+    <h2>Categorías</h2>
 
-        <a class="card" href="categorias/fascia.html">
-          <h2>Fascia</h2>
-          <span>Campo fascial, bioquímica y mecano-transducción</span>
-        </a>
+    <div style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:1.5rem;
+      margin-top:2rem;
+    ">
 
-        <a class="card" href="categorias/ecografia.html">
-          <h2>Ecografía</h2>
-          <span>Diagnóstico y guía en fisioterapia</span>
-        </a>
+      <a class="card" href="categorias/anatomia.html">
+        <h3>Anatomía</h3>
+        <p class="muted">Estructura, función y correlación clínica</p>
+      </a>
 
-        <a class="card" href="categorias/bfr.html">
-          <h2>BFR</h2>
-          <span>Restricción de flujo y entrenamiento</span>
-        </a>
+      <a class="card" href="categorias/dolor.html">
+        <h3>Dolor</h3>
+        <p class="muted">Dolor crónico, sensibilización y abordaje clínico</p>
+      </a>
 
-        <a class="card" href="categorias/tdcs.html">
-          <h2>tDCS</h2>
-          <span>Neuromodulación no invasiva</span>
-        </a>
+      <a class="card" href="categorias/neurociencia.html">
+        <h3>Neurociencia</h3>
+        <p class="muted">Procesamiento central y control neuromodulador</p>
+      </a>
 
-        <a class="card" href="categorias/fisioterapia-invasiva.html">
-          <h2>Fisioterapia invasiva</h2>
-          <span>Abordajes percutáneos y ecoguiados</span>
-        </a>
+      <a class="card" href="categorias/fascia.html">
+        <h3>Fascia</h3>
+        <p class="muted">Campo fascial, bioquímica y mecanotransducción</p>
+      </a>
 
-        <a class="card" href="categorias/atm.html">
-          <h2>ATM</h2>
-          <span>Articulación temporomandibular y dolor orofacial</span>
-        </a>
-      </div>
-    </section>
+      <a class="card" href="categorias/ecografia.html">
+        <h3>Ecografía</h3>
+        <p class="muted">Diagnóstico y guía en fisioterapia</p>
+      </a>
 
-    <footer>
-      <p>
-        © <strong>El FisioLógico</strong> · Repositorio científico en fisioterapia basado en evidencia.
-      </p>
-    </footer>
+      <a class="card" href="categorias/bfr.html">
+        <h3>BFR</h3>
+        <p class="muted">Restricción de flujo y entrenamiento</p>
+      </a>
 
-  </main>
+      <a class="card" href="categorias/tdcs.html">
+        <h3>tDCS</h3>
+        <p class="muted">Neuromodulación no invasiva</p>
+      </a>
+
+      <a class="card" href="categorias/fisioterapia-invasiva.html">
+        <h3>Fisioterapia invasiva</h3>
+        <p class="muted">Abordajes percutáneos y ecoguiados</p>
+      </a>
+
+      <a class="card" href="categorias/atm.html">
+        <h3>ATM</h3>
+        <p class="muted">Articulación temporomandibular y dolor orofacial</p>
+      </a>
+
+    </div>
+  </section>
+
+  <footer>
+    © <strong>El FisioLógico</strong> · Repositorio científico en fisioterapia basada en evidencia.
+  </footer>
+
+</main>
+
 </body>
 </html>
+
