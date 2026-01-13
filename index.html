@@ -1,105 +1,195 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>El Fisiológico · Artículos Científicos</title>
+  <meta charset="utf-8" />
+  <title>El FisioLógico · Repositorio Científico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --black: #000000;
+      --white: #ffffff;
+      --yellow: #FCBF06;
+      --gray: #1a1a1a;
+      --card: #111111;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--black);
+      color: var(--white);
       line-height: 1.6;
-      background: #ffffff;
-      color: #111;
     }
 
-    header {
-      margin-bottom: 3rem;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
+    /* ===== Layout ===== */
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
     }
 
-    p.subtitle {
-      color: #555;
+    /* ===== Hero ===== */
+
+    .hero {
+      margin-bottom: 4rem;
+    }
+
+    .brand {
+      color: var(--yellow);
+      letter-spacing: 0.12em;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 0 0 1rem 0;
+      font-weight: 700;
+    }
+
+    .hero p {
       max-width: 700px;
+      color: #cccccc;
+      font-size: 1.05rem;
     }
 
-    section {
-      margin-top: 3rem;
+    /* ===== Grid ===== */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
 
-    .category {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 2rem;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.05),
+        0 20px 40px rgba(0,0,0,0.6);
     }
 
-    .category h2 {
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow:
+        0 0 0 1px rgba(252,191,6,0.4),
+        0 30px 60px rgba(0,0,0,0.8);
+    }
+
+    .card h2 {
       margin-top: 0;
       margin-bottom: 0.5rem;
       font-size: 1.4rem;
+      color: var(--yellow);
     }
 
-    .category p {
-      margin-bottom: 1rem;
-      color: #444;
+    .card p {
+      font-size: 0.95rem;
+      color: #d0d0d0;
+      margin-bottom: 2rem;
     }
 
-    .category a {
-      text-decoration: none;
+    .card span {
+      font-size: 0.85rem;
+      color: var(--yellow);
       font-weight: 600;
-      color: #0057ff;
     }
+
+    /* ===== Footer ===== */
 
     footer {
-      margin-top: 4rem;
+      margin-top: 5rem;
       padding-top: 2rem;
-      border-top: 1px solid #eee;
-      font-size: 0.9rem;
-      color: #666;
+      border-top: 1px solid #222;
+      font-size: 0.8rem;
+      color: #888;
+      text-align: center;
+    }
+
+    /* ===== Responsive ===== */
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>El Fisiológico</h1>
-  <p class="subtitle">
-    Repositorio de artículos científicos analizados y presentados en HTML interactivo,
-    con enfoque crítico, clínico y docente en fisioterapia y ciencias del movimiento.
-  </p>
-</header>
+  <main class="container">
 
-<section>
-  <h2>Áreas de conocimiento</h2>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="brand">El_FisioLógico</div>
+      <h1>Repositorio de Artículos Científicos</h1>
+      <p>
+        Artículos científicos analizados y presentados en HTML interactivo,
+        con enfoque crítico, clínico y docente en fisioterapia
+        y ciencias del movimiento.
+      </p>
+    </section>
 
-  <div class="category">
-    <h2>Blood Flow Restriction (BFR)</h2>
-    <p>
-      Evidencia científica sobre entrenamiento con restricción del flujo sanguíneo,
-      comparativas con cargas altas, adaptaciones neuromusculares y aplicaciones clínicas.
-    </p>
-    <a href="articulos/bfr/index.html">Ver artículos de BFR →</a>
-  </div>
+    <!-- GRID DE ÁREAS -->
+    <section class="grid">
 
-  <div class="category">
-    <h2>Fascia y ecografía</h2>
-    <p>
-      Estudios sobre estructura fascial, imagen ecográfica, biomecánica y su implicación
-      en dolor, movimiento y toma de decisiones clínicas.
-    </p>
-    <a href="articulos/fascia/index.html">Ver artículos de fascia →</a>
-  </div>
+      <a href="/articulos/bfr/" class="card">
+        <h2>Blood Flow Restriction (BFR)</h2>
+        <p>
+          Evidencia científica sobre entrenamiento con restricción
+          del flujo sanguíneo, comparativas con cargas altas,
+          adaptaciones neuromusculares y aplicaciones clínicas.
+        </p>
+        <span>Ver artículos →</span>
+      </a>
 
-  <div class="category">
-    <h2>Neuromodulación y dolor</h2>
-    <p>
-      Investigación sobre tDCS, TENS, neuromodulación central y peri
+      <a href="/articulos/fascia/" class="card">
+        <h2>Fascia y ecografía</h2>
+        <p>
+          Estudios sobre estructura fascial, imagen ecográfica,
+          biomecánica y su implicación en dolor,
+          movimiento y toma de decisiones clínicas.
+        </p>
+        <span>Ver artículos →</span>
+      </a>
+
+      <a href="/articulos/neuromodulacion/" class="card">
+        <h2>Neuromodulación y dolor</h2>
+        <p>
+          Investigación sobre tDCS, TENS,
+          neuromodulación central y periférica,
+          y su impacto en dolor crónico y rendimiento.
+        </p>
+        <span>Ver artículos →</span>
+      </a>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      © El_FisioLógico · Repositorio científico para profesionales de la salud
+    </footer>
+
+  </main>
+
+</body>
+</html>
