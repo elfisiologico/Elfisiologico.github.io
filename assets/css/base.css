@@ -1,0 +1,182 @@
+/* =========================================================
+   EL FISIOLÓGICO · BASE CSS
+   Contrato visual único del repositorio
+   ========================================================= */
+
+/* ---------- Variables ---------- */
+:root {
+  --bg:#000000;
+  --surface:#0F0F0F;
+  --border:#272727;
+
+  --text:#FFFFFF;
+  --muted:#A1A1A1;
+
+  --accent:#FCBF06;
+  --accent-soft: rgba(252,191,6,.08);
+
+  --success:#00E676;
+  --danger:#FF4B4B;
+
+  --font-main:'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  --radius:8px;
+  --shadow:0 4px 20px rgba(0,0,0,.3);
+}
+
+/* ---------- Reset mínimo ---------- */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+/* ---------- Base ---------- */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* ---------- Tipografía ---------- */
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+  margin-top: 0;
+}
+h1 { font-size: 2.1rem; }
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+  padding-bottom: .3rem;
+  margin-bottom: 1.5rem;
+}
+h3 { font-size: 1.1rem; }
+
+.mono { font-family: var(--font-mono); }
+.muted { color: var(--muted); }
+
+/* ---------- Navegación ---------- */
+nav a {
+  font-family: var(--font-mono);
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+/* ---------- Categorías: tarjetas de artículo ---------- */
+.article-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+}
+.article-card h3 { margin-bottom: .3rem; }
+.article-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+/* ---------- Tablas ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .95rem;
+}
+th, td {
+  text-align: left;
+  padding: .6rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+th {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ---------- Listas ---------- */
+ul { padding-left: 1.2rem; }
+ul li { margin-bottom: .6rem; }
+
+/* ---------- Highlight crítico ---------- */
+.highlight {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ---------- Quiz ---------- */
+.quiz-item {
+  margin-bottom: 1.5rem;
+  border-left: 3px solid var(--border);
+  padding-left: 1rem;
+}
+.quiz-options {
+  display: grid;
+  gap: .5rem;
+  margin-top: .5rem;
+}
+.quiz-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: .6rem .8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+}
+.quiz-btn:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+.quiz-btn.correct {
+  border-color: var(--success);
+  color: var(--success);
+  background: rgba(0,230,118,.1);
+}
+.quiz-btn.wrong {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+.explanation {
+  display: none;
+  margin-top: .5rem;
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  font-size: .85rem;
+  color: var(--muted);
+}
