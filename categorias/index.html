@@ -1,120 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <title>El FisioLógico · Repositorio Científico</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Repositorio científico de artículos analizados críticamente en fisioterapia, dolor, neurociencia, fascia, ecografía, BFR, tDCS, ATM y fisioterapia invasiva." />
-  <meta name="author" content="El FisioLógico" />
+  <title>Repositorio Científico en Fisioterapia · Categorías | El FisioLógico</title>
+
+  <meta name="description" content="Repositorio científico en fisioterapia basado en análisis crítico de la evidencia. Categorías: dolor, anatomía, neurociencia, fascia, BFR, ecografía, ATM y fisioterapia invasiva.">
+  <meta name="author" content="El FisioLógico">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Montserrat:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Base CSS -->
-  <link rel="stylesheet" href="assets/css/base.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#000000',
+              yellow: '#FCBF06',
+              darkGray: '#121212',
+              mediumGray: '#2A2A2A',
+              lightGray: '#A1A1A1',
+            }
+          },
+          fontFamily: {
+            sans: ['Roboto', 'sans-serif'],
+            heading: ['Montserrat', 'sans-serif'],
+            logo: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { background:#000; color:#fff; }
+    .scientific-grid{
+      background-image:
+        linear-gradient(#2A2A2A 1px, transparent 1px),
+        linear-gradient(90deg, #2A2A2A 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0));
+    }
+  </style>
 </head>
 
-<body>
+<body class="min-h-screen bg-brand-black text-white font-sans flex flex-col">
 
-<main>
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-brand-mediumGray h-20 flex items-center">
+  <div class="container mx-auto px-6 flex justify-between items-center">
 
-  <!-- Header editorial -->
-  <header style="margin-bottom:3.5rem;">
-    <div class="mono muted" style="letter-spacing:.12em; text-transform:uppercase; font-size:.8rem;">
-      Repositorio Científico
+    <div class="flex items-center gap-4">
+      <a href="/repository.html" class="text-gray-400 hover:text-brand-yellow transition-colors">
+        <i data-lucide="arrow-left" class="w-6 h-6"></i>
+      </a>
+
+      <div class="flex items-center tracking-tight select-none">
+        <span class="text-white font-logo font-bold text-2xl tracking-tighter">Fisio</span>
+        <span class="text-brand-yellow font-logo font-bold text-2xl tracking-tighter">Lógico</span>
+      </div>
     </div>
 
-    <h1>El FisioLógico</h1>
+    <span class="hidden md:block text-xs font-bold uppercase tracking-widest text-brand-yellow">
+      Categorías del repositorio
+    </span>
 
-    <p class="muted" style="max-width:760px; font-size:1.1rem;">
-      Colección revisada de artículos científicos analizados críticamente desde la fisioterapia clínica,
-      la neurociencia del dolor y el razonamiento integrativo.  
-      El objetivo no es acumular evidencia, sino interpretarla con criterio clínico.
-    </p>
-  </header>
+  </div>
+</nav>
 
-  <!-- Marco editorial -->
-  <section class="card">
-    <h2>Enfoque del repositorio</h2>
-    <p>
-      Este repositorio reúne análisis críticos de literatura científica relevante para la práctica
-      fisioterapéutica contemporánea. Cada artículo es evaluado desde una perspectiva metodológica,
-      clínica y de transferencia real, evitando lecturas reduccionistas o conclusiones exageradas.
-    </p>
-    <p>
-      La estructura prioriza claridad, trazabilidad del razonamiento y aplicabilidad clínica,
-      tanto en abordajes clásicos como invasivos y de neuromodulación.
-    </p>
+<!-- HEADER -->
+<header class="relative pt-32 pb-20 container mx-auto px-6">
+  <div class="scientific-grid absolute inset-0 opacity-20 pointer-events-none"></div>
+
+  <h1 class="font-heading font-black text-4xl md:text-6xl text-white mb-6 relative z-10">
+    Repositorio Científico en <br>
+    <span class="text-brand-yellow">Fisioterapia</span>
+  </h1>
+
+  <p class="text-brand-lightGray text-xl max-w-3xl leading-relaxed border-l-4 border-brand-yellow pl-6 relative z-10">
+    Archivo estructurado de análisis crítico de la evidencia científica.  
+    No organizamos papers por moda, sino por <strong>utilidad clínica real</strong>.
+  </p>
+</header>
+
+<!-- MAIN -->
+<main class="container mx-auto px-6 pb-24 flex-grow">
+
+  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- CATEGORÍA -->
+    <a href="anatomia.html" class="bg-brand-darkGray border border-brand-mediumGray p-8 hover:border-brand-yellow transition group">
+      <h2 class="font-heading text-2xl mb-2">Anatomía</h2>
+      <p class="text-brand-lightGray">Estructura, función y correlación clínica.</p>
+    </a>
+
+    <a href="dolor.html" class="bg-brand-darkGray border border-brand-mediumGray p-8 hover:border-brand-yellow transition group">
+      <h2 class="font-heading text-2xl mb-2">Dolor</h2>
+      <p class="text-brand-lightGray">Dolor crónico, sensibilización y razonamiento clínico.</p>
+    </a>
+
+    <a href="neurociencia.html" class="bg-brand-darkGray border border-brand-mediumGray p-8 hover:border-brand-yellow transition group">
+      <h2 class="font-heading text-2xl mb-2">Neurociencia</h2>
+      <p class="text-brand-lightGray">Procesamiento central, plasticidad y control motor.</p>
+    </a>
+
+    <a href="fascia.html" class="bg-brand-darkGray border border-brand-mediumGray p-8 hover:border-brand-yellow transition group">
+      <h2 class="font-heading text-2xl mb-2">Fascia</h2>
+      <p class="text-brand-lightGray">Campo fascial, adaptación tisular y biomecánica.</p>
+    </a>
+
+    <a href="ecografia.html" class="bg-brand-darkGray border border-brand-mediumGray p-8 hover:border-brand-yellow transition group">
+      <h2 class="font-heading text-2xl mb-2">Ecografía</h2>
+      <p class="text-brand-lightGray">Imagen musculoesquelética y razonamiento clínico.</p>
+    </a>
+
+    <a href="bfr.html" class="bg-brand-darkGray border border-brand-mediumGray p-8 hover:border-brand-yellow transition group">
+      <h2 class="font-heading text-2xl mb-2">BFR</h2>
+      <p class="text-brand-lightGray">Restricción del flujo sanguíneo y ejercicio terapéutico.</p>
+    </a>
+
+    <a href="tdcs.html" class="bg-brand-darkGray border border-brand-mediumGray p-8 hover:border-brand-yellow transition group">
+      <h2 class="font-heading text-2xl mb-2">tDCS</h2>
+      <p class="text-brand-lightGray">Neuromodulación no invasiva y plasticidad.</p>
+    </a>
+
+    <a href="fisioterapia-invasiva.html" class="bg-brand-darkGray border border-brand-mediumGray p-8 hover:border-brand-yellow transition group">
+      <h2 class="font-heading text-2xl mb-2">Fisioterapia invasiva</h2>
+      <p class="text-brand-lightGray">Punción, técnicas percutáneas y evidencia.</p>
+    </a>
+
+    <a href="atm.html" class="bg-brand-darkGray border border-brand-mediumGray p-8 hover:border-brand-yellow transition group">
+      <h2 class="font-heading text-2xl mb-2">ATM</h2>
+      <p class="text-brand-lightGray">Dolor orofacial y articulación temporomandibular.</p>
+    </a>
+
   </section>
-
-  <!-- Categorías -->
-  <section style="margin-top:4rem;">
-    <h2>Categorías</h2>
-
-    <div style="
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:1.5rem;
-      margin-top:2rem;
-    ">
-
-      <a class="card" href="categorias/anatomia.html">
-        <h3>Anatomía</h3>
-        <p class="muted">Estructura, función y correlación clínica</p>
-      </a>
-
-      <a class="card" href="categorias/dolor.html">
-        <h3>Dolor</h3>
-        <p class="muted">Dolor crónico, sensibilización y razonamiento clínico</p>
-      </a>
-
-      <a class="card" href="categorias/neurociencia.html">
-        <h3>Neurociencia</h3>
-        <p class="muted">Procesamiento central, plasticidad y control motor</p>
-      </a>
-
-      <a class="card" href="categorias/fascia.html">
-        <h3>Fascia</h3>
-        <p class="muted">Campo fascial, bioquímica y adaptación tisular</p>
-      </a>
-
-      <a class="card" href="categorias/ecografia.html">
-        <h3>Ecografía</h3>
-        <p class="muted">Imagen, razonamiento clínico y procedimientos guiados</p>
-      </a>
-
-      <a class="card" href="categorias/bfr.html">
-        <h3>BFR</h3>
-        <p class="muted">Restricción de flujo y ejercicio terapéutico</p>
-      </a>
-
-      <a class="card" href="categorias/tdcs.html">
-        <h3>tDCS</h3>
-        <p class="muted">Neuromodulación no invasiva y plasticidad</p>
-      </a>
-
-      <a class="card" href="categorias/fisioterapia-invasiva.html">
-        <h3>Fisioterapia invasiva</h3>
-        <p class="muted">Punción, técnicas percutáneas y evidencia</p>
-      </a>
-
-      <a class="card" href="categorias/atm.html">
-        <h3>ATM</h3>
-        <p class="muted">Articulación temporomandibular y dolor orofacial</p>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    © <strong>El FisioLógico</strong> · Repositorio científico en fisioterapia basada en evidencia.
-  </footer>
 
 </main>
+
+<!-- FOOTER -->
+<footer class="border-t border-brand-mediumGray bg-brand-darkGray py-12">
+  <div class="container mx-auto px-6 text-center text-brand-lightGray text-sm">
+    © El FisioLógico · Repositorio científico en fisioterapia basada en evidencia
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+</script>
 
 </body>
 </html>
